@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robstride_sdk</name>
+  <version>1.0.0</version>
+  <description>
+    RobStride SDK — A professional C++17 motor driver library for RobStride RS-series
+    brushless servo motors. Supports RobStride Private protocol and MIT mini-cheetah
+    protocol over SocketCAN (Linux) and Serial (AT-command bridge, Private only).
+    Includes Python bindings via pybind11.
+  </description>
+
+  <maintainer email="shadowx@atombotikx.com">shadowx</maintainer>
+  <license>MIT</license>
+
+  <!-- Build tools -->
+  <buildtool_depend>cmake</buildtool_depend>
+
+  <!-- System dependencies (non-ROS) -->
+  <depend>libserial-dev</depend>
+
+  <!-- Optional: Python bindings -->
+  <buildtool_depend condition="$BUILD_PYTHON == '1'">python3-pybind11</buildtool_depend>
+
+  <!-- Optional: Tests -->
+  <test_depend>libgtest-dev</test_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>

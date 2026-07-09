@@ -1,0 +1,14 @@
+# Build directories
+build/
+install/
+log/
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.so
+
+# IDEs
+.vscode/
+.idea/
