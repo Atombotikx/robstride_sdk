@@ -1,6 +1,6 @@
 # RobStride SDK
 
-> **C++17 motor control library for RobStride RS-series brushless servo motors.**  
+> **C++17 motor control library for RobStride Actuators.**  
 > Supports SocketCAN (Linux) and Serial (AT-command bridge). No ROS dependency.
 
 ---
@@ -19,7 +19,7 @@ robstride_sdk/
 │   ├── cpp/                            # C++ Examples (Private, MIT, Serial)
 │   └── python/                         # Python Examples (Private, MIT, Serial)
 │
-├── CMakeLists.txt                      # Standalone, no ROS required
+├── CMakeLists.txt                      # Standalone
 ├── package.xml                         # ament_cmake metadata (ROS workspace)
 └── README.md                           # This file
 ```
@@ -49,7 +49,7 @@ make -j$(nproc)
 ```
 
 ### Inside a ROS 2 Colcon Workspace
-If you are integrating this SDK into a ROS 2 ecosystem (e.g., alongside `atx_hardware_v2`), you can build it using `colcon`.
+If you are integrating this SDK into a ROS 2 ecosystem, you can build it using `colcon`.
 
 ```bash
 cd ~/ros2_ws
