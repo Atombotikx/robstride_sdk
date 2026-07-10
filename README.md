@@ -90,18 +90,6 @@ See [documentation/examples.md](documentation/examples.md) for more details, or 
 
 ---
 
-## Relationship to `atx_hardware_v2`
-
-```
-robstride_sdk          →   librobstride.so + pyrobstride.so
-     ↑ depends on
-atx_hardware_v2        →   libatx_hardware_v2.so (ros2_control plugin)
-```
-
-`atx_hardware_v2` is the ROS 2 hardware interface plugin. It links against `robstride_sdk` and provides the `CANSystem` plugin for `ros2_control`. The SDK itself has **zero ROS dependencies** and can be used in any C++17 application.
-
----
-
 ### Acknowledgements
 
 *Co-authored and optimized in collaboration with **Antigravity AI**.*
