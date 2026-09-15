@@ -71,6 +71,7 @@ void Motor::process_frame(const struct can_frame& frame) {
         std::lock_guard<std::mutex> lock(motor_mutex_);
         
         if (protocol_->parse_feedback(frame, status_, profile_)) {
+            status_.is_connected = true;
             // Automatic RX overrun matching: we received a reply!
             int prev = unacknowledged_commands_.fetch_sub(1);
             if (prev <= 0) unacknowledged_commands_.store(0); // clamp at zero
